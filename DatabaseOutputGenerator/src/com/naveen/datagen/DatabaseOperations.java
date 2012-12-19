@@ -22,11 +22,8 @@ final class DatabaseOperations {
 	public final void connect() throws ClassNotFoundException, SQLException {
 
 		Class.forName("com.mysql.jdbc.Driver");
-		//con = DriverManager.getConnection(
-			//	"jdbc:mysql://localhost:3306/uat_au_loc8_1296172295", username,
-				//password);
 		con = DriverManager.getConnection(
-				"jdbc:mysql://localhost:3308/test", username,
+				"jdbc:mysql://localhost:3308/au_kal_el_naveen", username,
 				password);
 
 	}
