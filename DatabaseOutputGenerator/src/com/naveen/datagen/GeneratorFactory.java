@@ -1,22 +1,24 @@
 package com.naveen.datagen;
 public class GeneratorFactory {
 
-	/*
-	 * public Output generate(Output out){ if(out instanceof XMLGenerator) {
-	 * return new XMLGenerator(); }else if (out instanceof GenerateJSON){ return
-	 * new GenerateJSON(); } return null; }
-	 */
-
-	public static OutputFormat getGenerator(final String type) {
+	
+    /*
+     * This returns the required OutputFormat object
+     * by making use of the ClassLoader
+     * @param type 
+     * @return OutputFormat
+     */
+	@SuppressWarnings("unchecked")
+	public static OutputFormat getGenerator(final String output_type) {
 		OutputFormat generator = null;
-		final Class generatorClass;
+		final Class<OutputFormat> generatorClass;
 		try {
-			generatorClass = ClassLoader.getSystemClassLoader().loadClass(
-					type + "Generator");
-			generator = (OutputFormat) (generatorClass.newInstance());
+			generatorClass = (Class<OutputFormat>) ClassLoader.getSystemClassLoader().loadClass(
+					output_type + "Generator");
+			generator = (generatorClass.newInstance());
 			
 		} catch (ClassNotFoundException e) {
-			System.out.println("Class not Found for Choice :"+type);
+			System.out.println("Class not Found for Choice :"+output_type);
 			e.printStackTrace();
 		} catch (InstantiationException e) {			
 			e.printStackTrace();
