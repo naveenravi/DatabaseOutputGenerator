@@ -23,7 +23,7 @@ final class DatabaseOperations {
 
 		Class.forName("com.mysql.jdbc.Driver");
 		con = DriverManager.getConnection(
-				"jdbc:mysql://localhost:3308/au_kal_el_naveen", username,
+				"jdbc:mysql://localhost:3308/uat_au_nav_130113", username,
 				password);
 
 	}

@@ -4,5 +4,10 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="C:/Users/Naveen/Downloads/mysql-connector-java-5.1.22/mysql-connector-java-5.1.22/mysql-connector-java-5.1.22-bin.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Naveen/Downloads/google-gson-2.2.2-release/google-gson-2.2.2/gson-2.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Naveen/Downloads/itext-5.3.5/itextpdf-5.3.5.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/C:/Users/Naveen/Downloads/itext-5.3.5/"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

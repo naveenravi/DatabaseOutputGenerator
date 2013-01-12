@@ -10,6 +10,7 @@ public class GeneratorFactory {
      */
 	@SuppressWarnings("unchecked")
 	public static OutputFormat getGenerator(final String output_type) {
+		System.out.println("type:::"+ output_type);
 		OutputFormat generator = null;
 		final Class<OutputFormat> generatorClass;
 		try {

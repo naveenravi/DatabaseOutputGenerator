@@ -11,14 +11,14 @@ import com.google.gson.Gson;
  */
 public class JSONGenerator extends OutputFormat {
 
-	private String fileLocation = "C:\\Supplier and Parts.json";
+	private final String jsonFileLocation = "C:\\Supplier and Parts.json";
 
 	@Override
 	public void generate(Data dat) {
 
 		Gson gson = new Gson();
 		String json = gson.toJson(dat);
-		File file = new File(fileLocation);
+		File file = new File(jsonFileLocation);
 		try {
 			FileWriter fw2 = new FileWriter(file);
 			fw2.write(json);

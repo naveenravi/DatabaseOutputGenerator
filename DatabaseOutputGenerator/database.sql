@@ -7,9 +7,18 @@ CREATE TABLE  `suppliers` (
 PRIMARY KEY (  `supplier_id` )
 );
 
-CREATE TABLE  `au_kal_el_naveen`.`supplier_parts` (
-`supplier_id` INT NOT NULL ,
-`part_name` VARCHAR( 255 ) NOT NULL ,
-`part_code` VARCHAR( 32 ) NOT NULL ,
-`cost_in_cents` SMALLINT( 5 ) NOT NULL
+CREATE TABLE 'supplier_parts' (
+  'supplier_id' INT NOT NULL,
+  'part_name' VARCHAR(255) NOT NULL,
+   'part_code' VARCHAR(32) NOT NULL,
+    'cost_in_cents' SMALLINT(5) NOT NULL
 );
+
+select s.supplier_id,s.name, sp.part_name
+from supplier_parts sp 
+INNER JOIN suppliers s 
+ON s.supplier_id = sp.supplier_id
+
+select sp.part_name, sp.cost_in_cents
+from supplier_parts sp
+order by cost_in_cents DESC

@@ -15,13 +15,13 @@ import javax.xml.bind.Marshaller;
  */
 public class XMLGenerator extends OutputFormat {
 
-	private String fileLocation = "C:\\Supplier and Parts.xml";
+	private final String xmlFileLocation = "C:\\Supplier and Parts.xml";
 	
 
 	@Override
 	public void generate(Data dat) {
 		try {
-			File file = new File(fileLocation);
+			File file = new File(xmlFileLocation);
 			FileWriter fw = new FileWriter(file);
 			JAXBContext context = JAXBContext.newInstance(Data.class);
 			Marshaller jaxbMarsh = context.createMarshaller();
