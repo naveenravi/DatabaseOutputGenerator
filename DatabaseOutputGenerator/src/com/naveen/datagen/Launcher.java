@@ -41,7 +41,9 @@ public class Launcher {
                 	OutputFormat OutputObj = GeneratorFactory.getGenerator(choice);
     				OutputObj.generate(dat);	
                 }
+				input_scan.close();
 			}
+			
 			System.out.println("---------FIN--V2--------------");
 
 		} catch (ClassNotFoundException CFE) {

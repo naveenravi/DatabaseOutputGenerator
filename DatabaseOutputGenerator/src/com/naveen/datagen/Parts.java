@@ -61,6 +61,7 @@ public class Parts {
 	 * @param dat
 	 * @return part
 	 */
+	@SuppressWarnings("unused")
 	private static Parts findPart(String part_id, Data dat) {
 		for (Parts part : dat.getParts_list()) {
 			if (part.getId().equalsIgnoreCase(part_id)) {
