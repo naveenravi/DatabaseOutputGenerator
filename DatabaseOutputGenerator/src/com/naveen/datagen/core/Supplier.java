@@ -1,4 +1,5 @@
-package com.naveen.datagen;
+package com.naveen.datagen.core;
+
 import java.util.ArrayList;
 
 import javax.xml.bind.annotation.XmlElement;
@@ -30,29 +31,29 @@ public class Supplier {
 	}
 
 	public int getID() {
-		return ID;
+		return this.ID;
 	}
 
 	public String getName() {
-		return name;
+		return this.name;
 	}
 
 	public String getCode() {
-		return code;
+		return this.code;
 	}
 
 	public String getTelephone() {
-		return telephone;
+		return this.telephone;
 	}
 
 	public String getEmail() {
-		return email;
+		return this.email;
 	}
 
 	public ArrayList<Parts> getParts_supplied() {
 		if (parts_supplied == null)
 			return parts_supplied = new ArrayList<Parts>();
-		return parts_supplied;
+		return this.parts_supplied;
 	}
 
 	public Supplier() {
@@ -70,5 +71,13 @@ public class Supplier {
 		this.setID(id);
 		this.setName(name);
 		getParts_supplied().add(part);
+	}
+
+	@Override
+	public String toString() {
+
+		return String.format(
+				"Name : %s , ID : %d, Code: %s, Telephone : %s, Email : %s",
+				getName(), getID(), getTelephone(), getEmail());
 	}
 }

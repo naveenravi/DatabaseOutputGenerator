@@ -1,8 +1,9 @@
-package com.naveen.datagen;
+package com.naveen.datagen.output;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import com.google.gson.Gson;
+import com.naveen.datagen.core.Data;
 
 /**
  * This class is for generating JSON output from the data
@@ -11,7 +12,7 @@ import com.google.gson.Gson;
  */
 public class JSONGenerator extends OutputFormat {
 
-	private final String jsonFileLocation = "C:\\Supplier and Parts.json";
+	private final String jsonFileLocation = "C:\\Users\\Naveen\\Desktop\\Testing\\Supplier and Parts.json";
 
 	@Override
 	public void generate(Data dat) {

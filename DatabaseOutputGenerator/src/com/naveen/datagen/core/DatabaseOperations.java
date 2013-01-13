@@ -1,4 +1,4 @@
-package com.naveen.datagen;
+package com.naveen.datagen.core;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;

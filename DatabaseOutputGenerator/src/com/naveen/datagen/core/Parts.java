@@ -1,4 +1,4 @@
-package com.naveen.datagen;
+package com.naveen.datagen.core;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -16,7 +16,7 @@ public class Parts {
 	private int cost;
 
 	public String getName() {
-		return name;
+		return this.name;
 	}
 
 	public void setName(String name) {
@@ -43,11 +43,11 @@ public class Parts {
 	}
 
 	public int getCost() {
-		return cost;
+		return this.cost;
 	}
 
 	public String getId() {
-		return id;
+		return this.id;
 	}
 
 	public void setId(String id) {
@@ -71,4 +71,8 @@ public class Parts {
 		return null;
 	}
 
+	@Override
+	public String toString(){
+		return String.format("Part Name: %s, ID: %s, Cost: %s", getName(), getId(), getCost());
+	}
 }

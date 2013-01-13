@@ -1,4 +1,6 @@
-package com.naveen.datagen;
+package com.naveen.datagen.output;
+
+import com.naveen.datagen.core.Data;
 
 /**
  * interface for generalising the output formats

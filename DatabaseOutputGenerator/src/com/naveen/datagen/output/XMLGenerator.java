@@ -1,4 +1,4 @@
-package com.naveen.datagen;
+package com.naveen.datagen.output;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -6,6 +6,8 @@ import java.io.IOException;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
+
+import com.naveen.datagen.core.Data;
 
 /**
  * This class is for generating the XML output
@@ -15,7 +17,7 @@ import javax.xml.bind.Marshaller;
  */
 public class XMLGenerator extends OutputFormat {
 
-	private final String xmlFileLocation = "C:\\Supplier and Parts.xml";
+	private final String xmlFileLocation = "C:\\Users\\Naveen\\Desktop\\Testing\\Supplier and Parts.xml";
 	
 
 	@Override

@@ -1,4 +1,4 @@
-package com.naveen.datagen;
+package com.naveen.datagen.core;
 import java.util.ArrayList;
 
 import javax.xml.bind.annotation.XmlElement;
