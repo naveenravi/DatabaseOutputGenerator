@@ -55,8 +55,7 @@ public class Parts {
 	}
 	
 	/**
-	 * finding the part from the total parts list
-	 * 
+	 * finding the part from the total parts list 
 	 * @param part_supplied
 	 * @param dat
 	 * @return part
@@ -73,6 +72,6 @@ public class Parts {
 
 	@Override
 	public String toString(){
-		return String.format("Part Name: %s, ID: %s, Cost: %s", getName(), getId(), getCost());
+		return "Part Name:"+getName()+", ID :"+getId()+", Cost :"+ getCost();
 	}
 }

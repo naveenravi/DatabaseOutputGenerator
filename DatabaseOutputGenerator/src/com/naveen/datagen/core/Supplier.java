@@ -76,8 +76,8 @@ public class Supplier {
 	@Override
 	public String toString() {
 
-		return String.format(
-				"Name : %s , ID : %d, Code: %s, Telephone : %s, Email : %s",
-				getName(), getID(), getTelephone(), getEmail());
+		return "Name :" + getName() + ", ID : " + getID() + ", Code: +"
+				+ getCode() + ", Telephone : " + getTelephone() + ", Email : "
+				+ getEmail();
 	}
 }
