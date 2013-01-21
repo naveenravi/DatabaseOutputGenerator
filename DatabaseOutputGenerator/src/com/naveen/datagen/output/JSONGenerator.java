@@ -12,7 +12,8 @@ import com.naveen.datagen.core.Data;
  */
 public class JSONGenerator extends OutputFormat {
 
-	private final String jsonFileLocation = "C:\\Users\\Naveen\\Desktop\\Testing\\Supplier and Parts.json";
+	private final String jsonFileLocation = "C:\\Users\\Naveen\\git\\DatabaseOutputGenerator\\" +
+			"DatabaseOutputGenerator\\Suppliers and Parts.json";
 
 	@Override
 	public void generate(Data dat) {

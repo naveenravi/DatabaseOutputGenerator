@@ -29,7 +29,8 @@ public class PDFGenerator extends OutputFormat {
 
 		Document doc = new Document(PageSize.A4);
 		Path pdf_path = Paths
-				.get("C:\\Users\\Naveen\\Desktop\\Testing\\Suppliers and Parts.pdf");
+				.get("C:\\Users\\Naveen\\git\\DatabaseOutputGenerator\\DatabaseOutputGenerator\\"
+						+ "Suppliers and Parts.pdf");
 		try {
 			OutputStream pdf_out = Files.newOutputStream(pdf_path);
 			PdfWriter.getInstance(doc, pdf_out);

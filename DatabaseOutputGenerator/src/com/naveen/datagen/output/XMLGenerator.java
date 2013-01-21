@@ -1,4 +1,5 @@
 package com.naveen.datagen.output;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -10,15 +11,15 @@ import javax.xml.bind.Marshaller;
 import com.naveen.datagen.core.Data;
 
 /**
- * This class is for generating the XML output
- * from the data 
+ * This class is for generating the XML output from the data
+ * 
  * @author naveen
- *
+ * 
  */
 public class XMLGenerator extends OutputFormat {
 
-	private final String xmlFileLocation = "C:\\Users\\Naveen\\Desktop\\Testing\\Supplier and Parts.xml";
-	
+	private final String xmlFileLocation = "C:\\Users\\Naveen\\git\\DatabaseOutputGenerator\\" +
+			"DatabaseOutputGenerator\\Suppliers and Parts.xml";
 
 	@Override
 	public void generate(Data dat) {

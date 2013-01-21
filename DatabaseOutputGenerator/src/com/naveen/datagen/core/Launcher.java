@@ -26,36 +26,32 @@ public class Launcher {
 		try {
 			Dobj.connect();
 			final Data dat = Dobj.execeuteQueries();
+			Scanner input_scan = new Scanner(System.in);;
 			System.out.println("What type of output do you want?");
 			while (input_check) {
 				System.out.println("--------------------");
 				System.out.println(output_format.JSON);
 				System.out.println(output_format.XML);
 				System.out.println(output_format.PDF);
-				System.out.println("or Say 'BYE' to exit!!");
-				Scanner input_scan = new Scanner(System.in);
+				System.out.println("or Say 'BYE' to exit!!");				 
 				String choice = input_scan.nextLine().toUpperCase();
-
 				if (choice.equalsIgnoreCase("bye")) {
 					System.out.println("T-H-A-N-K-S for using and GOODBYE");
 					input_check = false;
-					input_scan.close();
+					
 					break;
-				} else {
-					// OutputFormat OutputObj = output_format.XML.getOut();
+				} else {				
 					OutputFormat OutputObj = GeneratorFactory
 							.getGenerator(choice);
-					OutputObj.generate(dat);
+					if (OutputObj != null) {
+						OutputObj.generate(dat);
+					}
 				}
-
 			}
-
+			input_scan.close();
 			System.out.println("---------FIN--V2--------------");
-
-		} catch (ClassNotFoundException CFE) {
-			CFE.printStackTrace();
-		} catch (SQLException sqle) {
-			sqle.printStackTrace();
-		}
+		} catch (ClassNotFoundException  | SQLException exception) {
+			exception.printStackTrace();			
+		}					
 	}
 }

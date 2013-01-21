@@ -25,7 +25,8 @@ public class GeneratorFactory {
 
 		} catch (ClassNotFoundException e) {
 			System.out.println("Class not Found for Choice :" + output_type);
-			e.printStackTrace();
+			System.out.println("Try Again");
+			return null;
 		} catch (InstantiationException e) {
 			e.printStackTrace();
 		} catch (IllegalAccessException e) {
